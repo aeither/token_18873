@@ -1,5 +1,7 @@
 # token_18873.aleo
 
+Following workshop
+
 ## Build Guide
 
 To compile this Aleo program, run:
