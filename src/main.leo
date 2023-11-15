@@ -61,4 +61,11 @@ program token_18873.aleo {
         finalize transfer_public_to_private (caller: address, amount: u64) {
         let prev: u64 = Mapping::get(balance, caller);
         }
+
+        transition join (input: Token, input2: Token) -> Token {
+        return Token {
+            owner: self.caller,
+            balance: input.balance + input2.balance,
+        };
+        }
 }
