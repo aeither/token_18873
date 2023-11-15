@@ -56,3 +56,11 @@ finalize transfer_public_to_private:
     input r0 as address.public;
     input r1 as u64.public;
     get balance[r0] into r2;
+
+
+function join:
+    input r0 as Token.record;
+    input r1 as Token.record;
+    add r0.balance r1.balance into r2;
+    cast self.caller r2 into r3 as Token.record;
+    output r3 as Token.record;
